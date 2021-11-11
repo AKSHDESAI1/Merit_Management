@@ -1,0 +1,52 @@
+<!-- Create a Merit List Management System Using Basic JavaScript  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Merit Result</h1>
+    <h3 id="text" style="color: green;"></h3>
+    <button id="btn">Try again</button>
+</body>
+<script>
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', () => {
+        location.reload();
+    })
+    // console.log('hello world');
+    let a = prompt('Enter Your Percentage:- ')
+
+    if (a >= 80 && a <= 100) {
+        text.innerHTML = ('You are in Merit');
+    }
+    else if (a >= 60 && a < 80) {
+        text.innerHTML = (' You are in Ist division ');
+
+    }
+    else if (a >= 45 && a < 60) {
+        text.innerHTML = ('You are in IInd Division');
+
+    }
+    else if (a >= 33 && a < 45) {
+        text.innerHTML = ('You are in IIIrd Division');
+    }
+    else if (a < 33 && a >= 0) {
+        text.innerHTML = ('Sorry; You are fail.');
+    }
+    else {
+        text.innerHTML = ('Please! Enter a Valid Percentage. ')
+    }
+
+
+
+</script>
+
+</html>
